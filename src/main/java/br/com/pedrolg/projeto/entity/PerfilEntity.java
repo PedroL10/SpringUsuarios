@@ -4,7 +4,7 @@ import java.util.Objects;
 
 import org.springframework.beans.BeanUtils;
 
-import br.com.pedrolg.projeto.dto.RecursoDTO;
+import br.com.pedrolg.projeto.dto.PerfilDTO;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,24 +13,22 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "NPL_RECURSO")
-public class RecursoEntity {
+@Table(name = "NPL_PERFIL")
+public class PerfilEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
 	@Column(nullable = false)
-	private String nome;
+	private String descricao;
 	
-	@Column(nullable = false)
-	private String chave;
+	public PerfilEntity() {}
 	
-	public RecursoEntity() {}
-	
-	public RecursoEntity(RecursoDTO recurso) {
-		BeanUtils.copyProperties(recurso, this);
+	public PerfilEntity(PerfilDTO perfil) {
+		BeanUtils.copyProperties(perfil, this);
 	}	
+
 
 	public Long getId() {
 		return id;
@@ -40,20 +38,12 @@ public class RecursoEntity {
 		this.id = id;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getDescricao() {
+		return descricao;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getChave() {
-		return chave;
-	}
-
-	public void setChave(String chave) {
-		this.chave = chave;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 
 	@Override
@@ -69,8 +59,10 @@ public class RecursoEntity {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		RecursoEntity other = (RecursoEntity) obj;
+		PerfilEntity other = (PerfilEntity) obj;
 		return Objects.equals(id, other.id);
 	}
+	
+	
 	
 }
