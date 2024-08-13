@@ -28,6 +28,8 @@ public class PermissaoPerfilRecursoEntity {
 	@ManyToOne
 	@JoinColumn(name = "ID_RECURSO")
 	private RecursoEntity recurso;
+	
+	public PermissaoPerfilRecursoEntity() {	}
 
 	public PermissaoPerfilRecursoEntity(PermissaoPerfilRecursoDTO permissaoPerfilRecurso) {
 		BeanUtils.copyProperties(permissaoPerfilRecurso, this);

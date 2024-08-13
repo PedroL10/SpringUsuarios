@@ -1,4 +1,8 @@
-INSERT INTO NPL_USUARIO (ID, NOME, LOGIN, SENHA, EMAIL) VALUES (1, 'Rogério', 'rogerio', '1234','rogerionj@gmail.com');
+INSERT INTO NPL_USUARIO (ID, NOME, LOGIN, SENHA, EMAIL) VALUES (1, 'Pedro', 'pedro', '123456','pedrolg@gmail.com');
+INSERT INTO NPL_USUARIO (ID, NOME, LOGIN, SENHA, EMAIL) VALUES (2, 'Loreta', 'loreta', '543543','loreta@gmail.com');
+INSERT INTO NPL_USUARIO (ID, NOME, LOGIN, SENHA, EMAIL) VALUES (3, 'Kira', 'kira', '9087979','kira@gmail.com');
+INSERT INTO NPL_USUARIO (ID, NOME, LOGIN, SENHA, EMAIL) VALUES (4, 'Laika', 'laika', '132899','laika@gmail.com');
+INSERT INTO NPL_USUARIO (ID, NOME, LOGIN, SENHA, EMAIL) VALUES (5, 'Bibi', 'bibi', '6789345','bibi@gmail.com');
 
 ALTER SEQUENCE NPL_USUARIO_ID_SEQ RESTART WITH 2;
 
